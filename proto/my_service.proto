@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package myapp;
+
+// El servicio define los métodos que se pueden llamar remotamente
+service MyService {
+  // Define un método RPC y sus mensajes de solicitud y respuesta
+  rpc MyFunction (MyRequest) returns (MyResponse);
+}
+
+// Define el mensaje de solicitud
+message MyRequest {
+  string message = 1;
+}
+
+// Define el mensaje de respuesta
+message MyResponse {
+  string message = 1;
+}
